@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Blindly - Plataforma de cursos de tecnologia com foco em inclusão. Aprenda programação, design, operação de sistemas e cibersegurança." />
+    <meta name="keywords" content="cursos tecnologia, programação, design, inclusão, mulheres TI" />
+    <title>Blindly - Plataforma de Cursos</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="logo.png" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">blindly</div>
+      <nav role="navigation" aria-label="Menu principal">
+        <a href="#cursos">Nossos Cursos</a>
+        <a href="#quem-somos">Quem Somos</a>
+        <a href="#login">Login</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Aprenda com qualidade e inclusão na Blindly</h1>
+        <p>
+          Oferecemos cursos acessíveis e completos nas áreas de tecnologia.
+          Conheça nossa plataforma e comece hoje mesmo.
+        </p>
+        <button onclick="scrollToCursos()" aria-label="Conhecer nossos cursos">Conhecer Cursos</button>
+      </div>
+      <div class="hero-image">
+        <img src="logo.png" alt="Logo da Blindly - Plataforma de cursos de tecnologia" />
+      </div>
+    </section>
+
+    <section class="categorias" id="cursos">
+      <h2>Categorias de Curso</h2>
+      <div class="categoria-lista">
+        <div class="categoria">
+          <h3>Programação</h3>
+          <p>Aprenda linguagens como Python, JavaScript e mais.</p>
+        </div>
+        <div class="categoria">
+          <h3>Design</h3>
+          <p>Domine ferramentas de UI/UX, Figma, Photoshop etc.</p>
+        </div>
+        <div class="categoria">
+          <h3>Operação de Sistemas</h3>
+          <p>Gerencie sistemas operacionais e servidores.</p>
+        </div>
+        <div class="categoria">
+          <h3>Segurança</h3>
+          <p>Explore fundamentos e práticas de cibersegurança.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="quem-somos" id="quem-somos">
+      <h2>Quem Somos</h2>
+      <p><strong>Transformamos oportunidades em inclusão.</strong></p>
+      <p>
+        A Blindly nasceu do desejo de quebrar barreiras e reprogramar o futuro
+        da tecnologia com mais equidade. Somos uma empresa de impacto social que
+        une tecnologia e educação para promover a inclusão de mulheres no setor
+        de TI — uma área historicamente marcada pela sub-representação feminina.
+      </p>
+      <p>
+        Nosso propósito é claro: capacitar, conectar e empoderar mulheres para
+        que conquistem seu espaço no mercado tecnológico com autonomia e
+        reconhecimento. Fazemos isso por meio de dois pilares principais:
+      </p>
+      <p>
+        <strong>Recrutamento anônimo:</strong> Desenvolvemos ferramentas
+        tecnológicas que eliminam vieses inconscientes em processos seletivos,
+        garantindo que as decisões sejam baseadas em competências e não em
+        gênero, idade ou aparência.
+      </p>
+      <p>
+        <strong>Capacitação profissional:</strong> Oferecemos trilhas formativas
+        exclusivas para mulheres, com conteúdo de alta qualidade, mentoria
+        especializada e certificação reconhecida. Tudo pensado para mulheres que
+        conciliam múltiplas jornadas.
+      </p>
+      <p>
+        Mais do que uma plataforma, somos um ecossistema de transformação
+        social, que acredita que diversidade gera inovação, e inovação começa
+        com igualdade.
+      </p>
+      <h3>Por que existimos?</h3>
+      <p>
+        Porque ainda hoje, menos de 25% dos profissionais de TI são mulheres.
+      </p>
+      <p>
+        Porque o talento feminino é invisibilizado por estereótipos,
+        discriminação e falta de apoio.
+      </p>
+      <p>
+        Porque mudar esse cenário não é só uma questão de justiça — é uma
+        necessidade estratégica para empresas que querem inovar.
+      </p>
+      <h3>Nossos compromissos</h3>
+      <p>
+        Inclusão de mulheres de todas as idades, raças, orientações e histórias.
+      </p>
+      <p>Parcerias com empresas que adotam práticas reais de equidade.</p>
+      <p>
+        Formação acessível, flexível e conectada com as demandas reais do
+        mercado.
+      </p>
+      <p>Impacto social mensurável e sustentável.</p>
+      <h3>Junte-se à mudança</h3>
+      <p>
+        Na Blindly, acreditamos que o futuro da tecnologia é diverso, acessível
+        e livre de rótulos. E ele começa agora, com você.
+      </p>
+    </section>
+
+    <section class="login" id="login">
+      <h2>Login com sua conta</h2>
+      <button class="google-login" aria-label="Fazer login com conta do Google">Entrar com Google</button>
+    </section>
+
+    <button class="voltar-topo" onclick="voltarAoTopo()" aria-label="Voltar ao topo da página">↑</button>
+
+    <footer>&copy; 2025 Blindly. Todos os direitos reservados.</footer>
+    
+    <script>
+      // Smooth scroll functionality
+      function scrollToCursos() {
+        const cursosSection = document.getElementById("cursos");
+        if (cursosSection) {
+          cursosSection.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+      
+      // Back to top functionality
+      function voltarAoTopo() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+      
+      // Show/hide back to top button based on scroll position
+      window.addEventListener('scroll', function() {
+        const backToTopButton = document.querySelector('.voltar-topo');
+        if (window.scrollY > 300) {
+          backToTopButton.style.display = 'block';
+        } else {
+          backToTopButton.style.display = 'none';
+        }
+      });
+      
+      // Initialize back to top button visibility
+      document.addEventListener('DOMContentLoaded', function() {
+        const backToTopButton = document.querySelector('.voltar-topo');
+        backToTopButton.style.display = 'none';
+      });
+    </script>
+  </body>
+</html>
